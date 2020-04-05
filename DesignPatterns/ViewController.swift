@@ -13,6 +13,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        FileSorter().sortFile(length: 9);
+        FileSorter().sortFile(length: 99);
+        FileSorter().sortFile(length: 999);
+        FileSorter().sortFile(length: 99999);
     }
 
 

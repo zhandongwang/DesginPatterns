@@ -15,6 +15,10 @@
 		23C6E4D1243A224A00D7C3F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23C6E4CF243A224A00D7C3F3 /* LaunchScreen.storyboard */; };
 		23C6E4DC243A224A00D7C3F3 /* DesignPatternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6E4DB243A224A00D7C3F3 /* DesignPatternsTests.swift */; };
 		23C6E4E7243A224A00D7C3F3 /* DesignPatternsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6E4E6243A224A00D7C3F3 /* DesignPatternsUITests.swift */; };
+		23C6E4F5243A226E00D7C3F3 /* Strategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6E4F4243A226E00D7C3F3 /* Strategy.swift */; };
+		23C6E4F7243A272B00D7C3F3 /* Proxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6E4F6243A272B00D7C3F3 /* Proxy.swift */; };
+		23C6E4FB243A27A400D7C3F3 /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6E4FA243A27A400D7C3F3 /* Decorator.swift */; };
+		23C6E500243A287100D7C3F3 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6E4FF243A287100D7C3F3 /* Factory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		23C6E4E2243A224A00D7C3F3 /* DesignPatternsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignPatternsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23C6E4E6243A224A00D7C3F3 /* DesignPatternsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignPatternsUITests.swift; sourceTree = "<group>"; };
 		23C6E4E8243A224A00D7C3F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23C6E4F4243A226E00D7C3F3 /* Strategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strategy.swift; sourceTree = "<group>"; };
+		23C6E4F6243A272B00D7C3F3 /* Proxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proxy.swift; sourceTree = "<group>"; };
+		23C6E4FA243A27A400D7C3F3 /* Decorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decorator.swift; sourceTree = "<group>"; };
+		23C6E4FF243A287100D7C3F3 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,9 @@
 		23C6E4C3243A224600D7C3F3 /* DesignPatterns */ = {
 			isa = PBXGroup;
 			children = (
+				23C6E4FE243A285E00D7C3F3 /* Create */,
+				23C6E4FD243A282B00D7C3F3 /* Action */,
+				23C6E4FC243A27CE00D7C3F3 /* Structure */,
 				23C6E4C4243A224600D7C3F3 /* AppDelegate.swift */,
 				23C6E4C6243A224600D7C3F3 /* SceneDelegate.swift */,
 				23C6E4C8243A224600D7C3F3 /* ViewController.swift */,
@@ -126,6 +137,31 @@
 				23C6E4E8243A224A00D7C3F3 /* Info.plist */,
 			);
 			path = DesignPatternsUITests;
+			sourceTree = "<group>";
+		};
+		23C6E4FC243A27CE00D7C3F3 /* Structure */ = {
+			isa = PBXGroup;
+			children = (
+				23C6E4FA243A27A400D7C3F3 /* Decorator.swift */,
+				23C6E4F6243A272B00D7C3F3 /* Proxy.swift */,
+			);
+			path = Structure;
+			sourceTree = "<group>";
+		};
+		23C6E4FD243A282B00D7C3F3 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				23C6E4F4243A226E00D7C3F3 /* Strategy.swift */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		23C6E4FE243A285E00D7C3F3 /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				23C6E4FF243A287100D7C3F3 /* Factory.swift */,
+			);
+			path = Create;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +295,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23C6E4F5243A226E00D7C3F3 /* Strategy.swift in Sources */,
 				23C6E4C9243A224600D7C3F3 /* ViewController.swift in Sources */,
 				23C6E4C5243A224600D7C3F3 /* AppDelegate.swift in Sources */,
 				23C6E4C7243A224600D7C3F3 /* SceneDelegate.swift in Sources */,
+				23C6E4F7243A272B00D7C3F3 /* Proxy.swift in Sources */,
+				23C6E4FB243A27A400D7C3F3 /* Decorator.swift in Sources */,
+				23C6E500243A287100D7C3F3 /* Factory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
