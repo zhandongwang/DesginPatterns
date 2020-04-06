@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        testDecoratorPatter()
+        testAdaptorPattern()
     }
     func testStrategyPattern() {
         FileSorter().sortFile(length: 9);
@@ -28,13 +28,31 @@ class ViewController: UIViewController {
         _ = uc.login()
     }
     
-    func testDecoratorPatter() {
+    func testDecoratorPattern() {
         let car:Car = Toyota();
         let wheelsCar = WheelsDecorator(car: car)
         let windowsCar = WindowsDecorator(car:wheelsCar);
         let enginedCar = EngineDecorator(car:windowsCar);
         
         enginedCar.run();
+
+    }
+    func testAdaptorPattern() {
+        let ori = Adaptee();
+        ori.methodA();
+        ori.methodB();
+        ori.methodC();
+        
+        
+//        var adp_1 = Adaptor()
+//        adp_1.method1();
+//        adp_1.method2();
+//        adp_1.methodC();
+        
+        let adp_2 = Adaptor2(adaptee: ori);
+        adp_2.method1();
+        adp_2.method2();
+        adp_2.methodC();
 
     }
     
