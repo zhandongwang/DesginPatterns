@@ -6,7 +6,7 @@
 //  Copyright © 2020 王战东. All rights reserved.
 //
 
-//结构型--代理模式
+//结构型（类或对象的组合）--代理模式
 import Foundation
 
 struct UserModel {

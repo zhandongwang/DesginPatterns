@@ -6,7 +6,7 @@
 //  Copyright © 2020 王战东. All rights reserved.
 //
 
-//结构型--装饰器模式
+//结构型（类或对象的组合）--装饰器模式
 import Foundation
 
 protocol Car {

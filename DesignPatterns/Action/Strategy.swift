@@ -6,7 +6,7 @@
 //  Copyright © 2020 王战东. All rights reserved.
 //
 
-//行为性--策略模式
+//行为型(类或对象之间的交互)--策略模式
 
 import Foundation
 

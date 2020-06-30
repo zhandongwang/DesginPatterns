@@ -20,6 +20,9 @@
 		23C6E4F7243A272B00D7C3F3 /* Proxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6E4F6243A272B00D7C3F3 /* Proxy.swift */; };
 		23C6E4FB243A27A400D7C3F3 /* Decorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6E4FA243A27A400D7C3F3 /* Decorator.swift */; };
 		23C6E500243A287100D7C3F3 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6E4FF243A287100D7C3F3 /* Factory.swift */; };
+		23CD9EBD245AAC77003463C2 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD9EBC245AAC77003463C2 /* Builder.swift */; };
+		23CD9EBF245ABF84003463C2 /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD9EBE245ABF84003463C2 /* Bridge.swift */; };
+		23CD9EC1245AD657003463C2 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD9EC0245AD657003463C2 /* Observer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		23C6E4F6243A272B00D7C3F3 /* Proxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proxy.swift; sourceTree = "<group>"; };
 		23C6E4FA243A27A400D7C3F3 /* Decorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decorator.swift; sourceTree = "<group>"; };
 		23C6E4FF243A287100D7C3F3 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		23CD9EBC245AAC77003463C2 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		23CD9EBE245ABF84003463C2 /* Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
+		23CD9EC0245AD657003463C2 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,7 @@
 				23C6E4FA243A27A400D7C3F3 /* Decorator.swift */,
 				23C6E4F6243A272B00D7C3F3 /* Proxy.swift */,
 				2320D418243B63B000D904C5 /* Adaptor.swift */,
+				23CD9EBE245ABF84003463C2 /* Bridge.swift */,
 			);
 			path = Structure;
 			sourceTree = "<group>";
@@ -155,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				23C6E4F4243A226E00D7C3F3 /* Strategy.swift */,
+				23CD9EC0245AD657003463C2 /* Observer.swift */,
 			);
 			path = Action;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				23C6E4FF243A287100D7C3F3 /* Factory.swift */,
+				23CD9EBC245AAC77003463C2 /* Builder.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -298,12 +307,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23CD9EBF245ABF84003463C2 /* Bridge.swift in Sources */,
 				23C6E4F5243A226E00D7C3F3 /* Strategy.swift in Sources */,
 				23C6E4C9243A224600D7C3F3 /* ViewController.swift in Sources */,
 				23C6E4C5243A224600D7C3F3 /* AppDelegate.swift in Sources */,
 				2320D419243B63B000D904C5 /* Adaptor.swift in Sources */,
 				23C6E4C7243A224600D7C3F3 /* SceneDelegate.swift in Sources */,
+				23CD9EBD245AAC77003463C2 /* Builder.swift in Sources */,
 				23C6E4F7243A272B00D7C3F3 /* Proxy.swift in Sources */,
+				23CD9EC1245AD657003463C2 /* Observer.swift in Sources */,
 				23C6E4FB243A27A400D7C3F3 /* Decorator.swift in Sources */,
 				23C6E500243A287100D7C3F3 /* Factory.swift in Sources */,
 			);
