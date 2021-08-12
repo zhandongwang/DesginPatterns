@@ -12,10 +12,35 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        testObserverPattern()
+        testVisitor()
+    }
+    
+    func testVisitor() {
+        let resourceFiles:[ResourceFile] = [PdfFile(filePath:"a.pdf"),PPTFile(filePath: "b.ppt"),WordFile(filePath: "c.word")]
+        for rs in resourceFiles {
+            rs.accept(visitor: Extractor())
+        }
+        
+        for rs in resourceFiles {
+            rs.accept(visitor: Compressor())
+        }
+        
     }
 
+    func testResponsibilityChain() {
+        let oneProcessChain = HandleChain()
+        oneProcessChain.add(handler: HandlerA())
+        oneProcessChain.add(handler: HandlerB())
+        oneProcessChain.handle()
+        
+        let allProcessChain = PHandlerChain()
+        allProcessChain.add(handler: PHandlerA())
+        allProcessChain.add(handler: PHandlerB())
+        allProcessChain.handle()
+        
+        
+    }
+    
     func testObserverPattern() {
         let subject = ConcreteSubject();
         let observer1 = ConcreteObserverOne();
@@ -31,10 +56,10 @@ class ViewController: UIViewController {
     }
     
     func testFactoryPattern() {
-        FileParserFactory().creatParser(name: "json")?.parse(filePath: "hello")
-        FileParserFactory().creatParser(name: "xml")?.parse(filePath: "world")
-        FileParserFactory().creatParser(name: "properties")?.parse(filePath: "hangzhou")
-        
+//        FileParserFactory().creatParser(name: "json")?.parse(filePath: "hello")
+//        FileParserFactory().creatParser(name: "xml")?.parse(filePath: "world")
+//        FileParserFactory().creatParser(name: "properties")?.parse(filePath: "hangzhou")
+        RuleConfigParserFactoryMap().getPaserFactory(type: "json")?.createFilePaser().parse(filePath: "beijing");
     }
     
     func testBuilderPattern() {
@@ -84,18 +109,33 @@ class ViewController: UIViewController {
         ori.methodA();
         ori.methodB();
         ori.methodC();
-        
-        
-//        var adp_1 = Adaptor()
-//        adp_1.method1();
-//        adp_1.method2();
-//        adp_1.methodC();
+
         
         let adp_2 = Adaptor2(adaptee: ori);
         adp_2.method1();
         adp_2.method2();
         adp_2.methodC();
 
+    }
+    
+    var loginDialog:LoginDialog = LoginDialog.init()
+    func testMediatorPattern() {
+        let loginButton:UIButton = UIButton.init()
+        let regButton:UIButton = UIButton.init()
+        let userNameTextField:UITextField = UITextField.init()
+        let passwordTextField:UITextField = UITextField.init()
+        
+        loginDialog.loginButton = loginButton
+        loginDialog.regButton = regButton
+        loginDialog.userNameTextField = userNameTextField
+        loginDialog.passwordTextField = passwordTextField
+        
+        loginButton.addTarget(self, action: #selector(login(button:)), for: .touchUpInside)
+        
+    }
+    
+    @objc func login(button:UIButton) {
+        loginDialog.handle(component: button, event: "login")
     }
     
 }
